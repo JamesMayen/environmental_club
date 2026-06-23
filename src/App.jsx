@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/environmental_club">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
