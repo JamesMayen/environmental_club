@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest: #0B6B3A;
+  --deepgreen: #14532D;
+  --leaf: #4ADE80;
+  --sky: #38BDF8;
+  --earth: #8B5A2B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #14241c;
+  background-color: #F8FAFC;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Signature motif: Growth Rings ---------- */
+/* Concentric organic rings -- standing in for tree growth rings / ripple-of-impact,
+   used as the site's one recurring, ownable visual signature. */
+.growth-rings {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.growth-rings span {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(74, 222, 128, 0.35);
+}
+
+/* ---------- Signature motif: Nile wave divider ---------- */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- Topographic dot texture for section backgrounds ---------- */
+.topo-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(11, 107, 58, 0.10) 1.4px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Card lift */
+.lift-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.lift-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -16px rgba(11, 107, 58, 0.28);
+}
+
+/* Gradient text */
+.text-gradient-forest {
+  background: linear-gradient(100deg, #0B6B3A, #4ADE80 60%, #38BDF8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #EAF6EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B6B3A;
+  border-radius: 8px;
+}
+
+/* Swiper pagination color override */
+.swiper-pagination-bullet-active {
+  background: #0B6B3A !important;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: #0B6B3A !important;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Form inputs used across Get Involved, Partners, and Contact forms */
+.form-input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #E5E7EB;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background: #fff;
+}
+.form-input:focus {
+  border-color: #0B6B3A;
+}
