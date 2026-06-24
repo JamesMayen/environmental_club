@@ -56,7 +56,7 @@ export default function Donate() {
           <SectionHeading eyebrow="How to give" title="Donation Methods" />
           <div className="grid md:grid-cols-3 gap-6">
             <MethodCard icon={Smartphone} title="Mobile Money">
-              <p>MTN MoMo: <span className="font-semibold">+211XXXXXXXXX</span></p>
+              <p>MTN MoMo: <span className="font-semibold">+211923238712</span></p>
               <p>Zain Cash: <span className="font-semibold">+211XXXXXXXXX</span></p>
             </MethodCard>
             <MethodCard icon={Landmark} title="Bank Transfer">
