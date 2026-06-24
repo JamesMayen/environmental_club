@@ -59,7 +59,7 @@ export default function Contact() {
                 {siteInfo.phone}
               </ContactRow>
               <ContactRow icon={MessageCircle} label="WhatsApp">
-                <a href={siteInfo.social.whatsapp} className="text-forest hover:underline">{siteInfo.whatsapp}</a>
+                <a href={siteInfo.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Chat with UJEC on WhatsApp" className="text-forest hover:underline">{siteInfo.whatsapp}</a>
               </ContactRow>
             </ul>
 

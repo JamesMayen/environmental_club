@@ -15,18 +15,18 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20" aria-label="Primary">
-        <Link to="/" className="flex items-center gap-3 font-heading font-extrabold text-lg" onClick={() => setOpen(false)}>
-          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white flex-shrink-0 shadow-sm hover:scale-105 transform transition">
+        <div className="flex items-center gap-3 font-heading font-extrabold text-lg" aria-hidden="true">
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white flex-shrink-0 shadow-sm transform transition">
             <img src="/images/hero/logo.jpeg" alt="UJEC logo" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="leading-tight">
             <div className="text-deepgreen text-sm font-semibold">Environmental Club</div>
             <div className="text-gray-600 text-xs">University of Juba</div>
           </div>
-        </Link>
+        </div>
 
         <button
-          className="lg:hidden p-2 rounded-md text-deepgreen"
+          className="p-2 rounded-md text-deepgreen"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Toggle navigation menu"
@@ -42,7 +42,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white shadow-xl overflow-hidden"
+            className="bg-white shadow-xl overflow-hidden"
           >
             <ul className="flex flex-col px-6 py-4 gap-1">
               {navLinks.map((link) => (

@@ -156,7 +156,7 @@ export default function Home() {
                   <img 
                     src={president?.image || '/images/gallery/president.jpeg'} 
                     alt={president?.name} 
-                    className="w-full h-72 object-cover rounded-2xl shadow-2xl" 
+                    className="w-full h-72 object-cover object-top rounded-2xl shadow-2xl" 
                     loading="lazy" 
                     onError={(e)=>{e.currentTarget.src='/images/gallery/president.jpeg'}} 
                   />
@@ -177,16 +177,10 @@ export default function Home() {
                       </a>
                     )}
                     {/* WhatsApp contact button */}
-                    { (siteInfo?.whatsapp || president?.whatsapp || president?.phone) && (() => {
-                      const raw = (president?.phone || president?.whatsapp || siteInfo?.whatsapp || '')
-                      const digits = raw.replace(/\D/g, '')
-                      return (
-                        <a href={`https://wa.me/${digits}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600 text-white hover:brightness-95 transition text-sm">
-                          <FaWhatsapp className="w-4 h-4" />
-                          Chat on WhatsApp
-                        </a>
-                      )
-                    })()}
+                    <a href={siteInfo.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Chat with UJEC on WhatsApp" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600 text-white hover:brightness-95 transition text-sm">
+                      <FaWhatsapp className="w-4 h-4" />
+                      Chat on WhatsApp
+                    </a>
                   </div>
                   <div>
                     <Button to="/leadership" variant="leaf">

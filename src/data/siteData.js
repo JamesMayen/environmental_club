@@ -9,16 +9,14 @@ export const siteInfo = {
   shortName: 'UJEC',
   motto: 'Eco Action for a Greener South',
   affiliation: 'Department of Environmental Studies, University of Juba',
-  email: 'info@ujec.org',
+  email: 'enviroclubuoj2026@gmail.com',
   phone: '+211 923 238 712',
-  whatsapp: '+211 923 238 712',
+  whatsapp: '+211920055990',
   address: 'Department of Environmental Studies, University of Juba, Juba, South Sudan',
   social: {
-    facebook: 'https://facebook.com/ujec',
-    instagram: 'https://instagram.com/ujec',
-    twitter: 'https://twitter.com/ujec',
-    linkedin: 'https://linkedin.com/company/ujec',
-    whatsapp: 'https://wa.me/+211 923 238 712',
+    facebook: 'https://www.facebook.com/Environmental Club-UoJ,juba',
+    whatsapp: 'https://wa.me/211920055990',
+    
   },
 }
 
@@ -65,9 +63,9 @@ export const challenges = [
 ]
 
 export const impactStats = [
-  { value: 50, suffix: '+', label: 'Trees Planted' },
+  { value: 5, suffix: '+', label: 'Trees Planted' },
   { value: 5, suffix: '+', label: 'Community Cleanups' },
-  { value: 300, suffix: '+', label: 'Active Members' },
+  { value: 150, suffix: '+', label: 'Active Members' },
   { value: 15, suffix: '+', label: 'Awareness Campaigns' },
 ]
 
@@ -90,7 +88,7 @@ export const featuredActivities = [
     slug: 'world-environment-day-cleanup',
     title: 'World Environment Day Cleanup',
     date: 'Jun 2026',
-    location: 'Juba Town',
+    location: 'Hai Kasaba, Juba',
     summary: 'A city-wide cleanup campaign marking World Environment Day, bringing together students, residents, and partner organizations.',
     category: 'Cleanups',
   },
@@ -244,14 +242,14 @@ export const blogPosts = [
 export const leadership = [
 {
 id: 1,
-name: 'Dongrin Ghum Majak',
+name: 'Dongrin Gum Majak',
 position: 'President',
 bio: 'Provides overall leadership and strategic direction for the Club. Represents the Club in official engagements, chairs Executive Committee meetings, and ensures the implementation of the Club’s vision, mission, and objectives.',
 quote: 'Environmental protection begins with individual responsibility and collective action.',
 image: '/images/leadership/president.jpeg',
 email: '[president@ujec.org](mailto:president@ujec.org)',
 linkedin: 'https://linkedin.com',
-whatsapp: 'https://whatsapp.com',
+whatsapp: 'https://wa.me/211923238712',
 },
 
 {
@@ -295,74 +293,9 @@ bio: 'Manages Club finances, prepares budgets, maintains financial records, and 
 quote: 'Transparency and accountability are essential for sustainable impact.',
 image: '/images/leadership/treasurer.jpeg',
 email: '[president@ujec.org](mailto:president@ujec.org)',
-linkedin: '#',
+linkedin: 'https://linkedin.com',
 },
 
-{
-id: 6,
-name: 'Position Open',
-position: 'Director of Programs & Events',
-bio: 'Leads the planning, coordination, and implementation of environmental programs, campaigns, events, and field activities.',
-quote: 'Every successful environmental action begins with a well-planned initiative.',
-image: '/images/hero/logo.jpeg',
-email: '[president@ujec.org](mailto:president@ujec.org)',
-linkedin: '#',
-},
-
-{
-id: 7,
-name: 'Position Open',
-position: 'Director of Research & Publications',
-bio: 'Coordinates environmental research activities, publications, reports, newsletters, and knowledge-sharing initiatives.',
-quote: 'Research transforms environmental concerns into actionable solutions.',
-image: '/images/hero/logo.jpeg',
-email: '[president@ujec.org](mailto:president@ujec.org)',
-linkedin: '#',
-},
-
-{
-id: 8,
-name: 'Position Open',
-position: 'Director of Publicity & Communications',
-bio: 'Manages the Club’s public image, social media channels, media relations, and communication strategies.',
-quote: 'Awareness is the first step toward environmental action.',
-image: '/images/hero/logo.jpeg',
-email: '[president@ujec.org](mailto:president@ujec.org)',
-linkedin: '#',
-},
-
-{
-id: 9,
-name: 'Position Open',
-position: 'Director of Community Outreach & Partnerships',
-bio: 'Builds partnerships with institutions, communities, NGOs, and stakeholders while leading outreach initiatives.',
-quote: 'Collaboration multiplies environmental impact.',
-image: '/images/hero/logo.jpeg',
-email: '[president@ujec.org](mailto:president@ujec.org)',
-linkedin: '#',
-},
-
-{
-id: 10,
-name: 'Position Open',
-position: 'Director of Membership & Welfare',
-bio: 'Oversees member recruitment, engagement, welfare, retention, and capacity-building initiatives.',
-quote: 'Strong communities are built through active participation and shared purpose.',
-image: '/images/hero/logo.jpeg',
-email: '[president@ujec.org](mailto:president@ujec.org)',
-linkedin: '#',
-},
-
-{
-id: 11,
-name: 'Position Open',
-position: 'Director of Gender & Inclusion',
-bio: 'Promotes diversity, equity, inclusion, and equal participation in all Club activities and leadership opportunities.',
-quote: 'Environmental sustainability requires inclusive leadership and diverse voices.',
-image: '/images/hero/logo.jpeg',
-email: '',
-linkedin: '#',
-},
 ]
 
 
@@ -382,39 +315,24 @@ export const partners = [
   {
     name: 'South Sudan Wildlife Service',
     logo: '/images/partners/wildlife-service.jpeg',
-    category: 'Conservation Agency',
+    category: 'Government Partner',
     link: '#',
   },
-  {
-    name: 'UNEP',
-    logo: '/images/partners/uoj.jpg',
-    category: 'United Nations Agency',
-    link: '#',
-  },
+ 
   {
     name: 'UNDP',
     logo: '/images/partners/undp.jpg',
     category: 'Development Partner',
     link: '#',
   },
-  {
-    name: 'FAO',
-    logo: '/images/partners/fao.jpg',
-    category: 'UN Agency',
-    link: '#',
-  },
+ 
   {
     name: 'UNESCO',
     logo: '/images/partners/unesco.jpg',
     category: 'Education & Science Partner',
     link: '#',
   },
-  {
-    name: 'Local Environmental NGOs',
-    logo: '/images/partners/uoj.jpg',
-    category: 'Community Partner',
-    link: '#',
-  },
+ 
 ]
 
 export const donationImpact = [

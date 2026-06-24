@@ -146,9 +146,9 @@ export default function GetInvolved() {
               </div>
             ))}
           </div>
-          <div className="text-center">
-            <Button href={siteInfo.social.whatsapp} variant="primary">Join Volunteer Team</Button>
-          </div>
+            <div className="text-center">
+            <Button href={siteInfo.social.whatsapp} variant="primary" aria-label="Join Volunteer Team on WhatsApp">Join Volunteer Team</Button>
+            </div>
         </div>
       </section>
 
@@ -158,7 +158,7 @@ export default function GetInvolved() {
           <MessageCircle className="w-12 h-12 text-white mx-auto mb-5" />
           <h2 className="font-heading font-extrabold text-3xl text-white mb-3">Join Our WhatsApp Community</h2>
           <p className="text-white/80 mb-8">Get real-time updates on events, volunteer calls, and Club news.</p>
-          <Button href={siteInfo.social.whatsapp} variant="leaf">
+          <Button href={siteInfo.social.whatsapp} variant="leaf" aria-label="Chat on WhatsApp"> 
             Chat on WhatsApp · {siteInfo.whatsapp}
           </Button>
         </div>

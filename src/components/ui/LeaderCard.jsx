@@ -19,7 +19,7 @@ export default function LeaderCard({ leader }) {
       className="bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-100 shadow-xl overflow-hidden flex flex-col h-full"
     >
       <div className="h-48 w-full overflow-hidden">
-        <img src={image} alt={name} loading="lazy" className="w-full h-full object-cover" onError={(e)=>{e.currentTarget.src='/images/gallery/hero.jpeg'}} />
+        <img src={image} alt={name} loading="lazy" className="w-full h-full object-cover object-top" onError={(e)=>{e.currentTarget.src='/images/gallery/hero.jpeg'}} />
       </div>
       <div className="p-6 flex-1 flex flex-col">
         <h4 className="font-heading font-bold text-lg text-deepgreen">{name}</h4>
