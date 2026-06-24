@@ -1,70 +1,32 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Leaf } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navLinks } from '../../data/siteData'
 import Button from '../ui/Button'
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
-    onScroll()
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     setOpen(false)
   }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white/0 md:bg-gradient-to-b md:from-black/30 md:to-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20" aria-label="Primary">
         <Link to="/" className="flex items-center gap-3 font-heading font-extrabold text-lg" onClick={() => setOpen(false)}>
-          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white/0 flex-shrink-0 shadow-sm hover:scale-105 transform transition">
-            <img src="/images/hero/logo.jpeg" alt="UJEC logo" className="w-full h-full object-cover" loading="lazy" onError={(e)=>{e.currentTarget.src='/images/hero/logo.jpeg'}} />
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white flex-shrink-0 shadow-sm hover:scale-105 transform transition">
+            <img src="/images/hero/logo.jpeg" alt="UJEC logo" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="leading-tight">
-            <div className={scrolled ? 'text-deepgreen text-sm font-semibold' : 'text-white text-sm font-semibold'}>Environmental Club</div>
-            <div className={scrolled ? 'text-gray-600 text-xs' : 'text-white/90 text-xs'}>University of Juba</div>
+            <div className="text-deepgreen text-sm font-semibold">Environmental Club</div>
+            <div className="text-gray-600 text-xs">University of Juba</div>
           </div>
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-7">
-          {navLinks.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                className={({ isActive }) =>
-                  `text-sm font-semibold transition-colors duration-200 ${
-                    isActive
-                      ? 'text-leaf'
-                      : scrolled
-                      ? 'text-gray-700 hover:text-forest'
-                      : 'text-white/90 hover:text-leaf md:text-white'
-                  }`
-                }
-                end={link.to === '/'}
-              >
-                {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-
-        <div className="hidden lg:block">
-          <Button to="/donate" variant="primary">Donate</Button>
-        </div>
-
         <button
-          className={`lg:hidden p-2 rounded-md ${scrolled ? 'text-forest' : 'text-deepgreen md:text-white'}`}
+          className="lg:hidden p-2 rounded-md text-deepgreen"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Toggle navigation menu"

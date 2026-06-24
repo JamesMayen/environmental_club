@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown, GraduationCap, Users2, Sprout, Calendar, MapPin } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import PartnerCard from '../components/ui/PartnerCard'
 import SEO from '../components/ui/SEO'
 import Button from '../components/ui/Button'
@@ -22,10 +23,14 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="relative min-h-[92vh] flex items-center bg-gradient-to-br from-deepgreen via-forest-700 to-forest-500 overflow-hidden">
+      <section
+        className="relative min-h-[92vh] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/images/hero/hero.jpeg')` }}
+      >
+        <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
         <GrowthRings originX="85%" originY="15%" tone="dark" />
         <div className="absolute inset-0 topo-dots opacity-20" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-28 pb-20 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-5 md:px-8 pt-28 pb-20 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -171,6 +176,17 @@ export default function Home() {
                         LinkedIn
                       </a>
                     )}
+                    {/* WhatsApp contact button */}
+                    { (siteInfo?.whatsapp || president?.whatsapp || president?.phone) && (() => {
+                      const raw = (president?.phone || president?.whatsapp || siteInfo?.whatsapp || '')
+                      const digits = raw.replace(/\D/g, '')
+                      return (
+                        <a href={`https://wa.me/${digits}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600 text-white hover:brightness-95 transition text-sm">
+                          <FaWhatsapp className="w-4 h-4" />
+                          Chat on WhatsApp
+                        </a>
+                      )
+                    })()}
                   </div>
                   <div>
                     <Button to="/leadership" variant="leaf">
