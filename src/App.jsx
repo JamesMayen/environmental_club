@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
@@ -15,6 +16,7 @@ import NotFound from './pages/NotFound'
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

@@ -19,7 +19,7 @@ export default function Leadership() {
       <section className="py-20 bg-warmgray">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <motion.div className="grid gap-6" initial="hidden" whileInView="show" viewport={{ once: true }} variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
               {leadership.map((leader, i) => (
                 <motion.div key={leader.id || i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.03 }}>
                   <LeaderCard leader={leader} />

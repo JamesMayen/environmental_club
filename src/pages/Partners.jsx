@@ -5,9 +5,8 @@ import { CheckCircle2 } from 'lucide-react'
 import SEO from '../components/ui/SEO'
 import SectionHeading from '../components/ui/SectionHeading'
 import Button from '../components/ui/Button'
+import PartnerCard from '../components/ui/PartnerCard'
 import { partners } from '../data/siteData'
-
-const categories = ['Government', 'NGOs', 'Universities', 'UN Agencies', 'Private Sector']
 
 export default function Partners() {
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm()
@@ -36,23 +35,12 @@ export default function Partners() {
       </section>
 
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 space-y-14">
-          {categories.map((cat) => {
-            const items = partners.filter((p) => p.category === cat)
-            if (items.length === 0) return null
-            return (
-              <div key={cat}>
-                <h3 className="font-heading font-bold text-xl text-deepgreen mb-5">{cat}</h3>
-                <div className="flex flex-wrap gap-4">
-                  {items.map((p) => (
-                    <span key={p.name} className="bg-forest-50 text-forest font-semibold px-5 py-3 rounded-full text-sm">
-                      {p.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
+        <div className="max-w-7xl mx-auto px-5 md:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+            {partners.map((partner) => (
+              <PartnerCard key={partner.name} partner={partner} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -68,16 +56,16 @@ export default function Partners() {
             viewport={{ once: true }}
           >
             <Field label="Organization Name" error={errors.org}>
-              <input className="form-input" {...register('org', { required: 'Organization name is required' })} />
+              <input className="form-input focus:ring-forest-500 focus:border-forest-500 focus:outline-none hover:border-forest-400 transition-all duration-300" {...register('org', { required: 'Organization name is required' })} />
             </Field>
             <Field label="Contact Person" error={errors.contact}>
-              <input className="form-input" {...register('contact', { required: 'Contact person is required' })} />
+              <input className="form-input focus:ring-forest-500 focus:border-forest-500 focus:outline-none hover:border-forest-400 transition-all duration-300" {...register('contact', { required: 'Contact person is required' })} />
             </Field>
             <Field label="Email" error={errors.email}>
-              <input type="email" className="form-input" {...register('email', { required: 'Email is required' })} />
+              <input type="email" className="form-input focus:ring-forest-500 focus:border-forest-500 focus:outline-none hover:border-forest-400 transition-all duration-300" {...register('email', { required: 'Email is required' })} />
             </Field>
             <Field label="Partnership Interest" error={errors.message}>
-              <textarea rows={4} className="form-input" placeholder="Tell us about your organization and proposed collaboration" {...register('message', { required: 'Please describe your interest' })} />
+              <textarea rows={4} className="form-input focus:ring-forest-500 focus:border-forest-500 focus:outline-none hover:border-forest-400 transition-all duration-300" placeholder="Tell us about your organization and proposed collaboration" {...register('message', { required: 'Please describe your interest' })} />
             </Field>
 
             {submitted && (
